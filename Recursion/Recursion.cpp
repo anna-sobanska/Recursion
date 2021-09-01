@@ -13,13 +13,22 @@ int recursivePower(int basic, int index) {
 	return basic * recursivePower(basic, index - 1);
 }
 
+int recursiveFactorial(int number) {
+	if (number < 2)
+		return 1;
+	return number * recursiveFactorial(number - 1);
+}
+
+
+
 int main() {
 
 	int sum=0;
-	int m=2, n=4;
+	int m=1, n=4;
 
 	cout <<"Sum = " <<recursiveSum(m,n) << endl;
 	cout <<"Power = " << recursivePower(m, n) << endl;
+	cout << "Factorial = " << recursiveFactorial(n) << endl;
 
 	system("pause>0");
 }
